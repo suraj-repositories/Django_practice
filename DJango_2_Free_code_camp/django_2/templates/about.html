@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+<p>{{ content }} </p>
+
+<div>
+
+    <Strong>Status: </Strong>
+    {% if data.status %} True {% else %} False {% endif %}
+
+    <br><br>
+    <b>Name :</b> {{ data.name|lower|capfirst  }}
+    <b>Age :</b> {{ data.age|add:100  }}
+    <br><br>
+    <b>Content</b> <br>
+    {{ data.html|safe }}
+
+    <ul>
+        {% for number in data.marks %}
+            <li>Sub : {{ forloop.counter }} -------------- {{ number }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
