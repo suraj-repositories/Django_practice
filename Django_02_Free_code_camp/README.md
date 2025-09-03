@@ -44,3 +44,11 @@ python manage.py createsuperuser
 ```sh
 python manage.py shell
 ```
+
+## Contents
+
+- dynamic url
+- validation
+- difference Model form vs Raw Django form
+- route naming
+- 

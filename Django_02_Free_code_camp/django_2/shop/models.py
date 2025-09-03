@@ -1,6 +1,7 @@
 from django.db import models
 
 from django.shortcuts import render
+from django.urls import reverse
 
 
 # Create your models here.
@@ -13,3 +14,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        # return f"/product/{self.id}"
+        return reverse("shop:productdetails", kwargs={"my_id": self.id})
