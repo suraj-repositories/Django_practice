@@ -1,121 +1,122 @@
-# Python + Django
 
+# 🐍 Python + Django Guide
 
-<br />
-<br />
-<div align="center" style="display: flex;align-items: center; justify-content: center; width: 100%; gap: 10px">
-<img src="./images/icon.png" alt="Icon" /><br />
-<img src="./images/python.png" alt="Icon" /><br />
+<div align="center" style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <img src="./images/icon.png" alt="Python Icon" width="100"/>
+  <img src="./images/python.png" alt="Django Icon" width="100"/>
 </div>
-<br />
-<br />
 
-### Some of important commands 
+---
 
-1. Check django install
+## ⚡ Essential Django Commands  
+
+### 🔍 Check Django installation
 ```sh
 python -m django --version
 ```
-1. Create Django Project
+
+### 📂 Create a new project
 ```sh
-django-admin startproject <project-name>
+django-admin startproject <project_name>
 ```
 
-1. Start The server
+### ▶️ Start development server
 ```sh
 python manage.py runserver
 ```
 
-1. Migrate the database
+### 🗄️ Apply database migrations
 ```sh
 python manage.py migrate
 ```
 
-1. Create App
+### 🏗️ Create a new app
 ```sh
-python manage.py startapp <app-name>
+python manage.py startapp <app_name>
 ```
 
-1. Create New Migrations
+### 🔄 Create & apply migrations
 ```sh
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-1. Create Admin dashboard
+### 🔑 Create superuser (Admin dashboard)
 ```sh
-python manage.py migrate
 python manage.py createsuperuser
 ```
 
-1. Start shell
+---
+
+## 🐚 Django Shell (Database Access)
+
+Django shell allows direct interaction with your database.  
+
+Start the shell:
 ```sh
 python manage.py shell
 ```
 
-# Django rest page
-- [Django_05_rest_2\README.md] (Django_04_rest_api/README.md) 
+---
 
+## 🌐 Django REST Implementations  
 
-# customizing admin dashboard
-1. install django-jazzmin
-```py
+👉 [Django REST Example](https://github.com/suraj-repositories/Django_practice/blob/main/Django_05_rest_2/README.md)
+
+---
+
+## 🎨 Customizing Admin Dashboard  
+
+### 🪛 Install **django-jazzmin**
+```sh
 pip install -U django-jazzmin
 ```
 
-2. add to your apps
-```py
+### 🛡 Add to `INSTALLED_APPS`
+```python
 INSTALLED_APPS = [
-    'jazzmin',
-    
+    "jazzmin",
     # other apps
 ]
 ```
-3. ready to run
-4. customization : [Django-jazzmin documentation](https://django-jazzmin.readthedocs.io/configuration/)
-```py
+
+### 🛠 Configure Settings (`settings.py`)  
+
+#### Basic setup
+```python
 JAZZMIN_SETTINGS = {
-     "site_title": "Rest API Admin",
-    'show_ui_builder' : True,
-    ### other propertis available on docs
+    "site_title": "Rest API Admin",
+    "show_ui_builder": True,
+    # more options available in docs
 }
 ```
 
-5. customized jazzmin dashboard : 
-```py
-
+#### UI Tweaks
+```python
 JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": False,
-    "body_small_text": False,
-    "brand_small_text": False,
-    "brand_colour": "navbar-white",
-    "accent": "accent-orange",
-    "navbar": "navbar-white navbar-light",
-    "no_navbar_border": False,
     "navbar_fixed": True,
-    "layout_boxed": False,
     "footer_fixed": True,
     "sidebar_fixed": True,
-    "sidebar": "sidebar-light-orange",
-    "sidebar_nav_small_text": False,
-    "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
-    "sidebar_nav_legacy_style": False,
-    "sidebar_nav_flat_style": False,
     "theme": "sketchy",
-    "dark_mode_theme": None,
+    "brand_colour": "navbar-white",
+    "accent": "accent-orange",
+    "sidebar": "sidebar-light-orange",
     "button_classes": {
         "primary": "btn-outline-primary",
         "secondary": "btn-outline-secondary",
         "info": "btn-outline-info",
         "warning": "btn-outline-warning",
         "danger": "btn-outline-danger",
-        "success": "btn-outline-success"
+        "success": "btn-outline-success",
     },
-    "actions_sticky_top": False
-} 
+}
 ```
 
-<img src="./images/jazzmin-dashboard.png">
+🌍 Full docs → [Django Jazzmin Configuration](https://django-jazzmin.readthedocs.io/configuration/)  
+
+---
+
+## 🦚 Example Customized Dashboard  
+
+<img src="./images/jazzmin-dashboard.png" alt="Jazzmin Dashboard Preview" width="600"/>
+
