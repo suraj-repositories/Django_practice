@@ -66,6 +66,10 @@ python manage.py shell
 ---
 
 ## 🎨 Customizing Admin Dashboard  
+you can customize the theme of admin dashboard by 
+- [Django Jazzmin](https://django-jazzmin.readthedocs.io/) 
+- [Django Jet](https://jet.readthedocs.io/en/latest/) 
+
 
 ### 🪛 Install **django-jazzmin**
 ```sh
